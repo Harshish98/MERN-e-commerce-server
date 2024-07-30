@@ -25,7 +25,7 @@ app.use(payment);
 app.use(contact);
 app.use(express.static("assets"));
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3040;
 
 DBConnection().then(() => {
   app.listen(port, () =>
