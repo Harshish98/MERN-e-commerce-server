@@ -1,4 +1,5 @@
-const ContactModel = require("../models/contactmodel")
+const path = require("path");
+const ContactModel = require(path.resolve(__dirname, "../models/contactmodel"));
 
 const SendMessage = async (req, res) => {
   try {
