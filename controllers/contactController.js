@@ -3,7 +3,7 @@ const ContactModel = require("../models/contactmodel");
 const SendMessage = async (req, res) => {
   try {
     const message = await ContactModel.create(req.body);
-    console.log(message)
+    console.log(message);
     res
       .status(201)
       .json({ message: "Message send successfully", data: message });
