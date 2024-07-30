@@ -1,5 +1,4 @@
-const path = require("path");
-const ContactModel = require(path.resolve(__dirname, "../models/contactmodel"));
+const ContactModel = require("../models/contactModel");
 
 const SendMessage = async (req, res) => {
   try {
@@ -7,7 +6,7 @@ const SendMessage = async (req, res) => {
     console.log(message);
     res
       .status(201)
-      .json({ message: "Message send successfully", data: message });
+      .json({ message: "Message sent successfully", data: message });
   } catch (error) {
     res.status(400).json({ message: error });
     console.log("Error in sending message: ", error);

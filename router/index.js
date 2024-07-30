@@ -29,10 +29,7 @@ const { AddAddress } = require("../controllers/addressController");
 const Payment = require("../controllers/payment");
 const auth = require("../middleware/authToken");
 const search = require("../controllers/search");
-const {
-  SendMessage,
-  GetMessages,
-} = require("../controllers/contactController");
+const { SendMessage, GetMessages } = require("../controllers/contactController");
 
 const user = express.Router();
 
